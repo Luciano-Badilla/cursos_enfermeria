@@ -2,7 +2,7 @@
 
 <head>
     <title>
-        Cursos de Enfermería
+        Grow Salud
     </title>
     <link rel="icon" href="https://cdn.iconscout.com/icon/free/png-256/free-hospital-2206985-1841178.png"
         type="image/png">
@@ -13,15 +13,28 @@
 
 
 <body class="bg-gray-100">
-    <header class="bg-white shadow">
-        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
-            <div class="flex items-center">
-                <i class="fa-regular fa-hospital text-2xl"></i>
-                <span class="ml-5 text-xl font-semibold text-gray-800">Academia de Enfermería</span>
+    <div class="relative h-screen">
+        <img alt="Background image of a person holding a tablet with medical icons overlay"
+            class="absolute inset-0 w-full h-full object-cover"
+            src="https://diarioenfermero.es/wp-content/uploads/2024/05/coronavirus-medical-staff-banner-template-scaled.jpg" />
+        <div class="absolute inset-0 bg-black opacity-50">
+        </div>
+        <div class="relative z-10 flex items-center justify-center h-full">
+            <div class="text-white text-center p-8">
+                <h1 class="text-5xl font-bold mb-4">
+                    Talleres de capacitación.
+                </h1>
+                <p class="text-lg mb-8">
+                    Elige el curso o taller que se adapte a tus necesidades personales o de tu empresa.
+                </p>
+                <button
+                    class="bg-transparent border border-white text-white py-2 px-4 rounded hover:bg-white hover:text-black transition duration-300">
+                    Inscríbete ahora
+                </button>
             </div>
         </div>
-    </header>
-    <div class="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
+    </div>
+    <div class="container mx-auto py-12 px-4 sm:px-6 lg:px-8" id="cursos">
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <!-- Card 1 -->
             <div class="bg-white rounded-lg shadow-md p-6">
@@ -147,3 +160,18 @@
 </body>
 
 </html>
+
+<script>
+    // Obtén el botón y el div de los cursos
+    const inscribirseBtn = document.querySelector("button");
+    const cursosDiv = document.getElementById("cursos");
+
+    // Agrega el evento de clic al botón
+    inscribirseBtn.addEventListener("click", function (event) {
+        event.preventDefault(); // Evita que se realice cualquier acción predeterminada del botón
+        cursosDiv.scrollIntoView({
+            behavior: "smooth", // Desplazamiento suave
+            block: "start" // Alinea el div al inicio de la ventana
+        });
+    });
+</script>
