@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-    <title>Inscripcion</title>
+    <title>Inscripción</title>
     <link rel="icon" href="https://cdn.iconscout.com/icon/free/png-256/free-hospital-2206985-1841178.png"
         type="image/png">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -42,7 +42,8 @@
                     </div>
                 </div>
                 <form id="inscripcion-form" novalidate>
-                    <div id="step-1" class="space-y-4">
+                    <!-- Paso 1 -->
+                    <div id="step-1" class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                         <div class="flex flex-col space-y-1.5">
                             <label for="nombre" class="font-medium">Nombre completo</label>
                             <input id="nombre" name="nombre" type="text" class="border rounded px-3 py-2" required>
@@ -59,7 +60,8 @@
                             <p class="error-message" id="error-telefono">Este campo es obligatorio.</p>
                         </div>
                     </div>
-                    <div id="step-2" class="space-y-4 hidden">
+                    <!-- Paso 2 -->
+                    <div id="step-2" class="grid grid-cols-1 lg:grid-cols-2 gap-6 hidden">
                         <div class="flex flex-col space-y-1.5">
                             <label for="fechaNacimiento" class="font-medium">Fecha de nacimiento</label>
                             <input id="fechaNacimiento" name="fechaNacimiento" type="date"
@@ -85,7 +87,8 @@
                             <p class="error-message" id="error-genero">Seleccione una opción.</p>
                         </div>
                     </div>
-                    <div id="step-3" class="space-y-4 hidden">
+                    <!-- Paso 3 -->
+                    <div id="step-3" class="grid grid-cols-1 lg:grid-cols-2 gap-6 hidden">
                         <div class="flex flex-col space-y-1.5">
                             <label for="nivelEducacion" class="font-medium">Nivel de educación</label>
                             <select id="nivelEducacion" name="nivelEducacion" class="border rounded px-3 py-2" required>
@@ -151,24 +154,21 @@
             const fields = steps[step - 1].querySelectorAll('input, select');
             let isValid = true;
 
-            fields.forEach(fields => {
-                let errorMessage = document.getElementById(`error-${fields.id}`);
+            fields.forEach(field => {
+                let errorMessage = document.getElementById(`error-${field.id}`);
 
-                // Verificación especial para los campos de radio (género)
-                if (fields.type === 'radio' && fields.name === 'genero') {
+                if (field.type === 'radio' && field.name === 'genero') {
                     const isGenderSelected = document.querySelector('input[name="genero"]:checked');
                     errorMessage = document.getElementById('error-genero');
 
-                    if (errorMessage) {
-                        if (!isGenderSelected) {
-                            errorMessage.style.display = 'block';
-                            isValid = false;
-                        } else {
-                            errorMessage.style.display = 'none';
-                        }
+                    if (!isGenderSelected) {
+                        errorMessage.style.display = 'block';
+                        isValid = false;
+                    } else {
+                        errorMessage.style.display = 'none';
                     }
                 } else if (errorMessage) {
-                    if (!fields.checkValidity()) {
+                    if (!field.checkValidity()) {
                         errorMessage.style.display = 'block';
                         isValid = false;
                     } else {
@@ -180,45 +180,44 @@
             return isValid;
         }
 
-        // Evento de clic para el botón "Siguiente"
         nextButton.addEventListener('click', () => {
             if (validateStep(currentStep)) {
-                if (currentStep < 3) {
+                if (currentStep === 3) {
+                    // Obtener los parámetros de la URL actual
+                    const urlParams = new URLSearchParams(window.location.search);
+                    const nombre = urlParams.get('nombre');
+                    const imagen = urlParams.get('imagen');
+                    const precio = urlParams.get('precio');
+
+                    // Verificar que los valores no sean null o vacíos
+                    if (nombre && imagen && precio) {
+                        // Construir la URL de redirección a la página de pago
+                        const url = new URL('payment.html', window.location.href); // Usa window.location.href para el entorno local
+                        url.searchParams.set('nombre', nombre);
+                        url.searchParams.set('imagen', imagen);
+                        url.searchParams.set('precio', precio);
+
+                        // Redirigir a la página de pago con los parámetros en la URL
+                        window.location.href = url.toString();
+                    } else {
+                        console.error('Uno o más parámetros están vacíos o no presentes en la URL actual.');
+                    }
+                } else {
                     currentStep++;
                     showStep(currentStep);
-                } else {
-                    // Obtener los parámetros de la URL
-                    const urlParams = new URLSearchParams(window.location.search);
-                    const cursoNombre = urlParams.get('nombre');
-                    const cursoImagen = urlParams.get('imagen');
-                    const cursoPrecio = urlParams.get('precio');
-
-                    // Crear la URL de redirección a la página de pago con los parámetros del curso
-                    let pagoUrl = 'payment.html'; // Para uso local, puedes usar una URL relativa.
-                    pagoUrl += `?nombre=${encodeURIComponent(cursoNombre)}&imagen=${encodeURIComponent(cursoImagen)}&precio=${encodeURIComponent(cursoPrecio)}`;
-
-                    // Enviar el formulario (si es necesario)
-                    // document.getElementById('inscripcion-form').submit(); // Si deseas enviar el formulario al servidor
-
-                    // Redirigir a la página de pago con los parámetros del curso
-                    window.location.href = pagoUrl;
                 }
             }
         });
 
-        // Evento de clic para el botón "Anterior"
+
+
         prevButton.addEventListener('click', () => {
-            if (currentStep > 1) {
-                currentStep--;
-                showStep(currentStep);
-            }
+            currentStep--;
+            showStep(currentStep);
         });
 
-        // Mostrar el primer paso al inicio
         showStep(currentStep);
     </script>
-
-
 </body>
 
 </html>
