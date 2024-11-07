@@ -28,61 +28,61 @@
 <body>
     <div class="container mx-0 px-4 py-8 w-full">
         <div class="bg-white shadow-md rounded-lg w-full flex flex-col">
-            <div class="p-4 border-b flex-grow">
-                <h2 class="text-xl lg:text-3xl font-bold">Formulario de Inscripción</h2>
-                <p class="text-gray-700 text-base lg:text-lg">Por favor, completa tus datos para inscribirte al curso.
-                </p>
+            <div class="p-6 border-b flex-grow">
+                <h2 class="text-2xl font-bold">Formulario de Inscripción</h2>
+                <p class="text-gray-700 text-lg">Por favor, completa tus datos para inscribirte al curso.</p>
             </div>
-            <div class="flex-grow p-4 overflow-auto">
-                <div class="mb-6">
-                    <div class="flex justify-between mb-2">
-                        <div id="progress-step-1" class="w-1/3 h-2 lg:h-3 rounded-l-full bg-green-500"></div>
-                        <div id="progress-step-2" class="w-1/3 h-2 lg:h-3 bg-green-200"></div>
-                        <div id="progress-step-3" class="w-1/3 h-2 lg:h-3 rounded-r-full bg-green-200"></div>
+            <div class="flex-grow p-6 overflow-auto">
+                <div class="mb-8">
+                    <div class="flex justify-between mb-4">
+                        <div id="progress-step-1" class="w-1/3 h-4 rounded-l-full bg-green-500"></div>
+                        <div id="progress-step-2" class="w-1/3 h-4 bg-green-200"></div>
+                        <div id="progress-step-3" class="w-1/3 h-4 rounded-r-full bg-green-200"></div>
                     </div>
-                    <div class="flex justify-between text-xs lg:text-base font-medium">
+                    <div class="flex justify-between text-base font-medium">
                         <span>Información personal</span>
                         <span>Detalles del curso</span>
                         <span>Confirmación</span>
                     </div>
                 </div>
                 <form id="inscripcion-form" novalidate>
-                    <div id="step-1" class="space-y-4">
-                        <div class="flex flex-col space-y-1">
-                            <label for="nombre" class="font-semibold text-base lg:text-lg">Nombre completo</label>
-                            <input id="nombre" name="nombre" type="text"
-                                class="border rounded px-4 py-3 w-full text-base lg:text-lg" required>
-                            <p class="error-message text-xs lg:text-sm text-red-500" id="error-nombre">Este campo es
-                                obligatorio.</p>
+                    <div id="step-1" class="space-y-6">
+                        <div class="flex flex-col space-y-2">
+                            <label for="nombre" class="font-semibold text-lg">Nombre completo</label>
+                            <input id="nombre" name="nombre" type="text" class="border rounded px-5 py-4 w-full text-lg"
+                                required>
+                            <p class="error-message text-sm text-red-500" id="error-nombre">Este campo es obligatorio.
+                            </p>
                         </div>
-                        <div class="flex flex-col space-y-1">
-                            <label for="email" class="font-semibold text-base lg:text-lg">Correo electrónico</label>
-                            <input id="email" name="email" type="email"
-                                class="border rounded px-4 py-3 w-full text-base lg:text-lg" required>
-                            <p class="error-message text-xs lg:text-sm text-red-500" id="error-email">Ingrese un correo
-                                electrónico válido.</p>
+                        <div class="flex flex-col space-y-2">
+                            <label for="email" class="font-semibold text-lg">Correo electrónico</label>
+                            <input id="email" name="email" type="email" class="border rounded px-5 py-4 w-full text-lg"
+                                required>
+                            <p class="error-message text-sm text-red-500" id="error-email">Ingrese un correo electrónico
+                                válido.</p>
                         </div>
-                        <div class="flex flex-col space-y-1">
-                            <label for="telefono" class="font-semibold text-base lg:text-lg">Teléfono</label>
+                        <div class="flex flex-col space-y-2">
+                            <label for="telefono" class="font-semibold text-lg">Teléfono</label>
                             <input id="telefono" name="telefono" type="tel"
-                                class="border rounded px-4 py-3 w-full text-base lg:text-lg" required>
-                            <p class="error-message text-xs lg:text-sm text-red-500" id="error-telefono">Este campo es
-                                obligatorio.</p>
+                                class="border rounded px-5 py-4 w-full text-lg" required>
+                            <p class="error-message text-sm text-red-500" id="error-telefono">Este campo es obligatorio.
+                            </p>
                         </div>
                     </div>
                     <!-- Ajustes similares para los pasos 2 y 3 -->
                 </form>
             </div>
-            <div class="p-4 border-t">
+            <div class="p-6 border-t">
                 <div class="flex justify-between w-full">
                     <button id="prev-button"
-                        class="bg-gray-300 text-gray-800 px-4 py-3 rounded-lg text-base lg:text-lg hidden">Anterior</button>
+                        class="bg-gray-300 text-gray-800 px-6 py-4 rounded-lg text-lg hidden">Anterior</button>
                     <button id="next-button"
-                        class="bg-black text-white px-4 py-3 rounded-lg text-base lg:text-lg ml-auto">Siguiente</button>
+                        class="bg-black text-white px-6 py-4 rounded-lg text-lg ml-auto">Siguiente</button>
                 </div>
             </div>
         </div>
     </div>
+
 
 
     <script>
