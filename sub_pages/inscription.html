@@ -42,8 +42,7 @@
                     </div>
                 </div>
                 <form id="inscripcion-form" novalidate>
-                    <!-- Paso 1 -->
-                    <div id="step-1" class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div id="step-1" class="space-y-4">
                         <div class="flex flex-col space-y-1.5">
                             <label for="nombre" class="font-medium">Nombre completo</label>
                             <input id="nombre" name="nombre" type="text" class="border rounded px-3 py-2" required>
@@ -60,8 +59,7 @@
                             <p class="error-message" id="error-telefono">Este campo es obligatorio.</p>
                         </div>
                     </div>
-                    <!-- Paso 2 -->
-                    <div id="step-2" class="grid grid-cols-1 lg:grid-cols-2 gap-6 hidden">
+                    <div id="step-2" class="space-y-4 hidden">
                         <div class="flex flex-col space-y-1.5">
                             <label for="fechaNacimiento" class="font-medium">Fecha de nacimiento</label>
                             <input id="fechaNacimiento" name="fechaNacimiento" type="date"
@@ -87,8 +85,7 @@
                             <p class="error-message" id="error-genero">Seleccione una opción.</p>
                         </div>
                     </div>
-                    <!-- Paso 3 -->
-                    <div id="step-3" class="grid grid-cols-1 lg:grid-cols-2 gap-6 hidden">
+                    <div id="step-3" class="space-y-4 hidden">
                         <div class="flex flex-col space-y-1.5">
                             <label for="nivelEducacion" class="font-medium">Nivel de educación</label>
                             <select id="nivelEducacion" name="nivelEducacion" class="border rounded px-3 py-2" required>
@@ -117,6 +114,7 @@
             </div>
         </div>
     </div>
+
 
     <script>
         let currentStep = 1;
