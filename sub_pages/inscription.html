@@ -23,7 +23,7 @@
 
 <body>
     <div class="container mx-auto px-4 py-8">
-        <div class="max-w-2xl mx-auto bg-white shadow-md rounded-lg">
+        <div class="max-w-lg mx-auto bg-white shadow-md rounded-lg">
             <div class="p-6 border-b">
                 <h2 class="text-2xl font-bold">Formulario de Inscripción</h2>
                 <p class="text-gray-600">Por favor, completa tus datos para inscribirte al curso.</p>
@@ -45,17 +45,20 @@
                     <div id="step-1" class="space-y-4">
                         <div class="flex flex-col space-y-1.5">
                             <label for="nombre" class="font-medium">Nombre completo</label>
-                            <input id="nombre" name="nombre" type="text" class="border rounded px-3 py-2" required>
+                            <input id="nombre" name="nombre" type="text" class="border rounded px-3 py-2 w-full"
+                                required>
                             <p class="error-message" id="error-nombre">Este campo es obligatorio.</p>
                         </div>
                         <div class="flex flex-col space-y-1.5">
                             <label for="email" class="font-medium">Correo electrónico</label>
-                            <input id="email" name="email" type="email" class="border rounded px-3 py-2" required>
+                            <input id="email" name="email" type="email" class="border rounded px-3 py-2 w-full"
+                                required>
                             <p class="error-message" id="error-email">Ingrese un correo electrónico válido.</p>
                         </div>
                         <div class="flex flex-col space-y-1.5">
                             <label for="telefono" class="font-medium">Teléfono</label>
-                            <input id="telefono" name="telefono" type="tel" class="border rounded px-3 py-2" required>
+                            <input id="telefono" name="telefono" type="tel" class="border rounded px-3 py-2 w-full"
+                                required>
                             <p class="error-message" id="error-telefono">Este campo es obligatorio.</p>
                         </div>
                     </div>
@@ -63,7 +66,7 @@
                         <div class="flex flex-col space-y-1.5">
                             <label for="fechaNacimiento" class="font-medium">Fecha de nacimiento</label>
                             <input id="fechaNacimiento" name="fechaNacimiento" type="date"
-                                class="border rounded px-3 py-2" required>
+                                class="border rounded px-3 py-2 w-full" required>
                             <p class="error-message" id="error-fechaNacimiento">Este campo es obligatorio.</p>
                         </div>
                         <div class="flex flex-col space-y-1.5">
@@ -88,7 +91,8 @@
                     <div id="step-3" class="space-y-4 hidden">
                         <div class="flex flex-col space-y-1.5">
                             <label for="nivelEducacion" class="font-medium">Nivel de educación</label>
-                            <select id="nivelEducacion" name="nivelEducacion" class="border rounded px-3 py-2" required>
+                            <select id="nivelEducacion" name="nivelEducacion" class="border rounded px-3 py-2 w-full"
+                                required>
                                 <option value="">Selecciona tu nivel de educación</option>
                                 <option value="secundaria">Secundaria</option>
                                 <option value="tecnico">Técnico</option>
@@ -100,7 +104,8 @@
                         <div class="flex flex-col space-y-1.5">
                             <label for="experienciaPrevia" class="font-medium">Experiencia previa en enfermería</label>
                             <input id="experienciaPrevia" name="experienciaPrevia" type="text"
-                                class="border rounded px-3 py-2" placeholder="Describe brevemente tu experiencia">
+                                class="border rounded px-3 py-2 w-full"
+                                placeholder="Describe brevemente tu experiencia">
                         </div>
                     </div>
                 </form>
@@ -114,6 +119,7 @@
             </div>
         </div>
     </div>
+
 
 
     <script>
