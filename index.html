@@ -4,13 +4,12 @@
     <title>
         Grow Salud
     </title>
-    <link rel="icon" href="https://cdn.iconscout.com/icon/free/png-256/free-hospital-2206985-1841178.png"
+    <link rel="icon" href="images/logo.png" style="filter: brightness(1000%); min-width: 15%;"
         type="image/png">
     <script src="https://cdn.tailwindcss.com">
     </script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet" />
 </head>
-
 
 <body class="bg-gray-100">
     <div class="relative h-screen">
@@ -21,78 +20,115 @@
         </div>
         <div class="relative z-10 flex items-center justify-center h-full">
             <div class="text-white text-center p-8">
-                <h1 class="text-5xl font-bold mb-4">
-                    Talleres de capacitación.
-                </h1>
-                <p class="text-lg mb-8">
-                    Elige el curso o taller que se adapte a tus necesidades personales o de tu empresa.
+                <div class="flex flex-col items-center justify-center">
+                    <img src="images/logo.png" style="filter: brightness(1000%); min-width: 15%;" alt="logo">
+                    <h1 class="text-5xl text-center mb-3 font-bold">
+                        Grow Salud
+                    </h1>
+                </div>
+                <p class="text-lg mb-4 max-w-xl">
+                    <strong>Ofrecemos cursos de calidad, con un acceso personalizado a Google Classroom y con
+                        certificación.
+                    </strong>
                 </p>
-                <button
-                    class="bg-transparent border border-white text-white py-2 px-4 rounded hover:bg-white hover:text-black transition duration-300">
-                    Inscríbete ahora
+                <p class="mb-8"><strong>
+                        APTO PARA TODO PÚBLICO, EMPRESA, ORGANIZACIÓN Y/O COLEGIO.</strong>
+                </p>
+                <button id="firstArrow"
+                    class="bg-transparent border border-white text-white py-2 px-4 rounded hover:bg-white hover:text-black transition duration-300"
+                    style="min-width: 25%;">
+                    <i class="fa-solid fa-arrow-down"></i>
                 </button>
             </div>
+        </div>
+    </div>
+    <div class="relative h-screen w-full h-full bg-white" id="secondStep">
+        <div class="relative z-10 flex items-center justify-center h-full">
+            <div class="text-white text-center p-8">
+                <h4 class="text-5xl text-center text-black mb-3 font-bold">
+                    «Desarrollar habilidades, para salvar vidas»
+                </h4>
+                <p class="text-2xl text-center mb-4 max-w-xl mx-auto text-black">
+                    Somos un grupo de enfermeras con el entusiasmo de compartir nuestros conocimientos e innovar en
+                    técnicas de enfermería para mejorar la calidad de atención al paciente.
+                </p>
+                <button id="cursosBtn"
+                    class="bg-transparent border border-black text-black py-2 px-4 rounded hover:bg-black hover:text-white transition duration-300"
+                    style="min-width: 25%;">
+                    Conozca nuestros cursos.
+                </button>
+            </div>
+
         </div>
     </div>
     <div class="container mx-auto py-12 px-4 sm:px-6 lg:px-8" id="cursos">
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <!-- Card 1 -->
-            <div class="bg-white rounded-lg shadow-md p-6">
+            <div class="bg-white rounded-lg shadow-md p-6 flex flex-col min-h-[500px]">
                 <img alt="Imagen del curso Fundamentos de Enfermería" class="w-full h-40 object-cover rounded-t-lg mb-4"
                     src="https://growsalud0.wordpress.com/wp-content/uploads/2024/11/post-para-instagram-dia-del-medico-creativo-azul-1.png?w=1024" />
                 <h2 class="text-xl font-bold mb-2">Taller primeros auxilios</h2>
-                <p class="text-gray-600 mb-4">Aprenderás las bases, principios y procedimientos fundamentales utilizados en la atención y el cuidado al paciente orientado al profesional a desarrollar habilidades y conocimientos para actuar de manera efectiva en situaciones de emergencia.</p>
+                <p class="text-gray-600 mb-4">Aprenderás las bases, principios y procedimientos fundamentales utilizados
+                    en la atención y el cuidado al paciente orientado al profesional a desarrollar habilidades y
+                    conocimientos para actuar de manera efectiva en situaciones de emergencia.</p>
                 <span
                     class="inline-block bg-gray-200 text-gray-800 text-sm px-2 py-1 rounded-full mb-4">Intermedio</span>
                 <div class="flex justify-between items-center mb-4">
                     <span class="text-gray-600"><i class="far fa-clock"></i> 4 semanas</span>
                     <span class="text-gray-600"><i class="fas fa-user"></i> 1500 estudiantes</span>
                 </div>
-                <div class="flex justify-between items-center">
+                <div class="flex justify-between items-center mt-auto">
                     <span class="text-2xl font-bold">$15.000</span>
-                    <a href="sub_pages/inscription.html?nombre=Fundamentos+de+Enfermería&imagen=https://www.emagister.com/blog/wp-content/uploads/2019/03/pexels-karolina-grabowska-5207102.jpg&precio=100000"
+                    <a href="sub_pages/inscription.html?nombre=Taller+primeros+auxilios&imagen=https://www.emagister.com/blog/wp-content/uploads/2019/03/pexels-karolina-grabowska-5207102.jpg&precio=15.000"
                         class="bg-black text-white px-4 py-2 rounded">Inscribirse</a>
                 </div>
             </div>
 
             <!-- Card 2 -->
-            <div class="bg-white rounded-lg shadow-md p-6">
+            <div class="bg-white rounded-lg shadow-md p-6 flex flex-col min-h-[500px]">
                 <img alt="Imagen del curso Cuidados Intensivos" class="w-full h-40 object-cover rounded-t-lg mb-4"
                     src="https://growsalud0.wordpress.com/wp-content/uploads/2024/11/post-para-instagram-telemedicina-minimalista-azul.png?w=1024" />
                 <h2 class="text-xl font-bold mb-2">Talleres educativos</h2>
-                <p class="text-gray-600 mb-4">Estos talleres educativos están orientados a proporcionar información y habilidades prácticas para el manejo de la salud en estas aéreas críticas.</p>
-                <span class="inline-block bg-gray-200 text-gray-800 text-sm px-2 py-1 rounded-full mb-4">Principiante</span>
+                <p class="text-gray-600 mb-4">Estos talleres educativos están orientados a proporcionar información y
+                    habilidades prácticas para el manejo de la salud en estas aéreas críticas.</p>
+                <span class="inline-block bg-gray-200 text-gray-800 text-sm px-2 py-1 rounded-full mb-4"
+                    style="margin-top: 14%;">Principiante</span>
                 <div class="flex justify-between items-center mb-4">
                     <span class="text-gray-600"><i class="far fa-clock"></i> 6 semanas</span>
                     <span class="text-gray-600"><i class="fas fa-user"></i> 800 estudiantes</span>
                 </div>
-                <div class="flex justify-between items-center">
-                    <span class="text-2xl font-bold">$15000</span>
-                    <a href="sub_pages/inscription.html?nombre=Cuidados+Intensivos&imagen=https://cdn.euroinnova.edu.es/img/subidasEditor/copia%20de%20disen%CC%83o%20sin%20ti%CC%81tulo%20-%202021-06-18t100446-1624003510.101&precio=150000"
+                <div class="flex justify-between items-center mt-auto">
+                    <span class="text-2xl font-bold">$15.000</span>
+                    <a href="sub_pages/inscription.html?nombre=Talleres+educativos&imagen=https://cdn.euroinnova.edu.es/img/subidasEditor/copia%20de%20disen%CC%83o%20sin%20ti%CC%81tulo%20-%202021-06-18t100446-1624003510.101&precio=15.000"
                         class="bg-black text-white px-4 py-2 rounded">Inscribirse</a>
                 </div>
             </div>
 
             <!-- Card 3 -->
-            <div class="bg-white rounded-lg shadow-md p-6">
+            <div class="bg-white rounded-lg shadow-md p-6 flex flex-col min-h-[500px]">
                 <img alt="Imagen del curso Enfermería Pediátrica" class="w-full h-40 object-cover rounded-t-lg mb-4"
                     src="https://growsalud0.wordpress.com/wp-content/uploads/2024/11/tu-historia-dia-de-la-enfermeria-ilustrado-azul.png?w=576" />
                 <h2 class="text-xl font-bold mb-2">Tecnicas avanzadas</h2>
-                <p class="text-gray-600 mb-4">Cursos avanzados en instruir y perfeccionar habilidades prácticas necesarias para la realización de procedimientos invasivos como no invasivos.
+                <p class="text-gray-600 mb-4">Cursos avanzados en instruir y perfeccionar habilidades prácticas
+                    necesarias para la realización de procedimientos invasivos como no invasivos.
                 </p>
-                <span
-                    class="inline-block bg-gray-200 text-gray-800 text-sm px-2 py-1 rounded-full mb-4">Avanzado</span>
+                <span class="inline-block bg-gray-200 text-gray-800 text-sm px-2 py-1 rounded-full mb-4"
+                    style="margin-top: 14%;">Avanzado</span>
                 <div class="flex justify-between items-center mb-4">
                     <span class="text-gray-600"><i class="far fa-clock"></i> 5 semanas</span>
                     <span class="text-gray-600"><i class="fas fa-user"></i> 1200 estudiantes</span>
                 </div>
-                <div class="flex justify-between items-center">
-                    <span class="text-2xl font-bold">$25000 + materiales aparte ($15000)</span>
-                    <a href="sub_pages/inscription.html?nombre=Enfermería+Pediátrica&imagen=https://estudiarenfermeria.com/wp-content/uploads/enfermera-pediatrica-funciones.webp&precio=130000"
-                        class="bg-black text-white px-4 py-2 rounded">Inscribirse</a>
+                <div class="flex justify-between items-center mt-auto">
+                    <div class="flex flex-col"><span class="text-2xl font-bold">$25000 +</span>
+                        <span class="text-2xl font-bold">materiales ($15000)</span>
+                    </div>
+
+                    <a href="sub_pages/inscription.html?nombre=Tecnicas+avanzadas&imagen=https%3A%2F%2Festudiarenfermeria.com%2Fwp-content%2Fuploads%2Fenfermera-pediatrica-funciones.webp&precio=25000%2Bmateriales%20aparte%20%28%2415000%29"
+                        class="bg-black text-white px-4 py-2 rounded" style="margin-top: 7%;">Inscribirse</a>
                 </div>
             </div>
         </div>
+
     </div>
     <div class="max-w-7xl mx-auto mb-12 px-4 sm:px-6 lg:px-8">
         <h2 class="text-3xl font-extrabold text-center mb-8">
@@ -161,11 +197,20 @@
 
 <script>
     // Obtén el botón y el div de los cursos
-    const inscribirseBtn = document.querySelector("button");
+    const firstBtn = document.getElementById("firstArrow");
+    const secondStepDiv = document.getElementById("secondStep");
+    const cursosBtn = document.getElementById("cursosBtn");
     const cursosDiv = document.getElementById("cursos");
 
     // Agrega el evento de clic al botón
-    inscribirseBtn.addEventListener("click", function (event) {
+    firstBtn.addEventListener("click", function (event) {
+        event.preventDefault(); // Evita que se realice cualquier acción predeterminada del botón
+        secondStepDiv.scrollIntoView({
+            behavior: "smooth", // Desplazamiento suave
+            block: "start" // Alinea el div al inicio de la ventana
+        });
+    });
+    cursosBtn.addEventListener("click", function (event) {
         event.preventDefault(); // Evita que se realice cualquier acción predeterminada del botón
         cursosDiv.scrollIntoView({
             behavior: "smooth", // Desplazamiento suave
